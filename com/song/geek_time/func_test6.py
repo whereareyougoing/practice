@@ -4,7 +4,7 @@
 
 fd = open('naem.txt')
 try:
-    for line in fd :
+    for line in fd:
         print(line)
 finally:
     fd.close()
