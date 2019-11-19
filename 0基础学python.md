@@ -261,3 +261,77 @@ print(sub(7,3))
 # 32、自定义上下文管理
 
 ![图片](https://user-images.githubusercontent.com/17619355/68912311-cb8f3080-0792-11ea-8683-2130850f9ac3.png)
+
+
+
+
+
+
+
+
+
+# 35、类和实例
+
+```python
+
+# 面向对象编程
+
+class Player():
+    def __init__(self, name, hp):  # 构造方法
+        self.name = name
+        self.hp = hp
+
+    def print_role(self):  # 自定义一个方法
+        print('%s : %s' %(self.name, self.hp))
+
+
+user1 = Player('zhangsan', 100) # 类的实例化
+user2 = Player('lisi', 120)
+
+user1.print_role()
+user2.print_role()
+```
+
+面向过程更适合机器运行，面向对象更符合人的思维习惯
+
+
+
+# 36、如何增加类的属性和方法
+
+```python
+class Player():
+    def __init__(self, name, hp, occu):  # 构造方法
+        self.__name = name  # 变量被称为属性   两个下滑线对类进行封装，类似于java的private
+        self.hp = hp
+        self.occu = occu
+
+    def print_role(self):  # 自定义一个方法
+        print('%s : %s' %(self.__name, self.hp))
+
+
+    def updateName(self,newname):
+        self.__name = newname
+
+
+class Monster():
+    '定义怪物类'
+    pass   # 类不报错
+
+
+
+user1 = Player('zhangsan', 100, 'war') # 类的实例化
+user2 = Player('lisi', 120, 'master')
+
+
+user1.print_role()
+user1.updateName('walson')
+user1.print_role()
+user2.print_role()
+```
+
+
+
+# 37、类的集成
+
+python的面向对象和java有异曲同工的特点，<br>所有的面向对象都符合面向对象的三大特性，封装，集成，多态
+
