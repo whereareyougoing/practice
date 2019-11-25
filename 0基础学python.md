@@ -460,7 +460,31 @@ c2.start()
 
 
 
+# 41、python标准库的定义
+
+python的官方库，www.python.org
+
+常用的库：
+
++ 文字处理 re
++ 日期类型  time   datetime
++ 数字和数学类型    math   random
++ 文件和目录访问   pathlib    os.path
++ 数据压缩存档   tarfile
++ 多线程    threading   queue
++ 通用操作系统   os   logging   argparse
++ Internet数据处理   base64   json   usllib
++ 结构化标记处理工具   html  xml
++ 开发工具   untiltest
++ 调试工具   timeit
++ 软件包发布   venv
++ 运行服务   _main_
 
 
 
+# 42、正则表达式库
+
+
+
+# 43、正则表达式的元字符
 
