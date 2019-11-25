@@ -1,3 +1,294 @@
+
+# 目录 
+
+[toc]
+
+# 1、 Python的语言特点
+
+* python的介绍和封装
+* python基本的数据结构
+
+![课程大纲](https://note.youdao.com/yws/public/resource/fc0842c41604dbdfeb5b59ea989535e3/xmlnote/087A94576AD7416DA6D1ADBCA48363CA/11662)
+
+![python语言特点](https://note.youdao.com/yws/public/resource/fc0842c41604dbdfeb5b59ea989535e3/xmlnote/77BA643A67904E9DBEEABC1C41037501/11667)
+
+~~~
+    对于新手特别友好，学习曲线小
+~~~
+
+# 2、python的历史
+
+> python版本
+
+~~~    
+python的发行版
+~~~
+
+* 学习python的网站
+
+![学习python的网站](https://note.youdao.com/yws/public/resource/fc0842c41604dbdfeb5b59ea989535e3/xmlnote/B311F6089D2E437C8D7924EB7A3BDE75/11676 '学习python的网站')
+
+# 3、python的安装
+
+# 4、python的书写规则
+
+- 变量赋值，变量命名，命名规范
+
+> 一般很少用_ 来命名，因为下划线是特殊文件的命名开头，驼峰命名方法。
+
+```
+    # 注释
+    import  导入
+    
+    缩进，python的结尾是没有分号进行分割的，所以下一行接上上一行的时候需要缩进。
+    
+```
+
+
+# 5、基础数据类型
+
+```
+        整数，浮点数，布尔，字符串
+        
+        类型转换，强制类型转换
+        
+        bool  进行布尔值的转换，非0的就是true
+```
+
+# 6、变量的定义和常用操作
+
+```
+        变量可以多次进行赋值
+        变量命名：
+        大小写命名：bandWidth
+        驼峰命名：BandWidth
+        下划线分割命名：band_width  
+        这些命名方式都是合法的
+        
+        下划线开头的命名也是合法的，但是以下划线开头的一般都是系统的问阿金命名
+```
+
+
+# 7、序列的概念
+
+![](https://note.youdao.com/yws/public/resource/fc0842c41604dbdfeb5b59ea989535e3/xmlnote/8A2581E6C8C346FDAB8DC1C93FEE8576/11863)
+
+> 字符串
+
+```
+    str 可以使用 [n] 单个指针获取当个位置上的值
+    可以使用[n:m] 获取范围的值
+    也可以使用 [-1] 从队列尾部获取值
+```
+
+_**python把所有的数据都看作对象，python没有变量这个概念，只有指针这个概念，变量可以被看作是<br>指针变量**_
+
+
+# 8、字符串的定义和使用
+
+> 序列的切片操作
+
+![](https://note.youdao.com/yws/public/resource/fc0842c41604dbdfeb5b59ea989535e3/xmlnote/9F37F68A68994050AF5ADF9CB8557085/11878)
+
+# 9、字符串的常用操作
+
+```
+    连接操纵，重复操作
+    +   *3  
+```
+
+# 10、元组定义和操作
+
+```
+    为了避免汉字乱码，可以在字符串的汉字前面加上一个小写的 u
+    注：元组类似于java的数组
+    元组的数据不能修改，可以添加和删除
+    
+    元组里数据的类型可以不一致，这个是和java数据有明显的区别的
+    
+    创建元组时元组里只有一个元素的时候需要在元素后面加一个逗号  temp={a,}
+    
+    元组的嵌套
+    
+```
+
+_**python里任何类型都是可以比较的，只要是类型相同**_  &nbsp;&nbsp;&nbsp; 例：(1,20) > (2,20) 
+
+不可变更的数据建议声明成元组，如果是可以变更的建议声明成列表
+
+
+# 11、列表的定义和操作
+
+```
+    列表：[abc,bcd]
+    可以增加和删减数据
+```
+```python
+    
+
+```
+
+# 12、条件语句
+
+
+
+
+# 13、for循环
+
+![](https://note.youdao.com/yws/public/resource/fc0842c41604dbdfeb5b59ea989535e3/xmlnote/F8B5A553502F46D3832CCCC139DDCAC6/12033)
+
+# while语句
+
+# 15、for循环中if语句的嵌套
+
+# 16、 while循环和if嵌套
+
+# 17、字典的定义和常用的操作
+
+![](https://note.youdao.com/yws/public/resource/fc0842c41604dbdfeb5b59ea989535e3/xmlnote/77D45019D51B441BBF13213643250D54/12045)
+
+` 字典类似于java中的map `
+
+字典值初始化：dic = {}
+
+```python
+
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+# 宋艾衡  2019-10-17 ,  23:32
+
+zodiac_name = (u'摩羯座',  u'水瓶座',  u'双鱼座',  u'自羊座',  u'金牛座', u'双子座', u'巨覆座', u'狮子座', u'处女座', u'天押座',  u'天蝎座',  u'射手座')
+zodiac_days = ((1, 20),  (2, 19),  (3, 21),  (4, 21), (5, 21), (6,  22), (7,  23),  (8, 23),  (9, 23),  (10, 23), (11, 23), (12, 23))
+chinese_zodiac = '猴鸡狗猪鼠牛虎兔龙蛇马羊'
+
+cz_num = {}
+for i in chinese_zodiac:
+    cz_num[i] = 0
+
+z_num = {}
+for i in zodiac_name:
+    z_num[i] = 0
+
+
+while True:
+
+    # 用户输入int类型的日期
+    year = int(input('请输入年份：'))
+    mouth = int(input('请输入月份：'))
+    day = int(input('请输入日期：'))
+
+    n = 0
+    while zodiac_days[n] < (mouth, day):
+        if mouth == 12 and day > 23:
+            break
+        n += 1
+    # 输出生肖和星座
+    print(zodiac_name[n])
+
+    print('%s 年的生肖是 %s' % (year, chinese_zodiac[year % 12]))
+
+    cz_num[chinese_zodiac[year % 12]] += 1
+    z_num[zodiac_name[n]] += 1
+
+    # 输出生肖和星座的统计信息
+    for each_key in cz_num.keys():
+        print('生肖 %s 有 %d 个' % (each_key, cz_num[each_key]))
+
+    for each_key in z_num.keys():
+        print('星座 %s 有 %d 个' % (each_key, z_num[each_key]))
+
+
+```
+
+# 18、列表推导式与字典推导式
+```python
+alist = []
+for i in range(1, 10):
+    if i % 2 == 0:
+        alist.append(i*i)
+print(alist)
+print(alist[0])
+
+
+blist = [i*i for i in range(1, 11) if i % 2 == 0]
+print(blist)
+
+
+zodiac_name = (u'摩羯座',  u'水瓶座',  u'双鱼座',  u'自羊座',  u'金牛座', u'双子座', u'巨覆座', u'狮子座', u'处女座', u'天押座',  u'天蝎座',  u'射手座')
+zodiac_days = ((1, 20),  (2, 19),  (3, 21),  (4, 21), (5, 21), (6,  22), (7,  23),  (8, 23),  (9, 23),  (10, 23), (11, 23), (12, 23))
+z_num = {}
+for i in zodiac_name:
+    z_num[i] = 0
+
+print(z_num)
+
+z_num = {i: 0 for i in zodiac_name}
+print(z_num)
+    
+```
+
+# 19、文件操作
+![](https://note.youdao.com/yws/public/resource/fc0842c41604dbdfeb5b59ea989535e3/xmlnote/6BFFD162D5634FBE87718C50AB3CD353/12122)
+
+
+# 20、文件的常用操作
+
+# 21、异常操作
+
+![](https://note.youdao.com/yws/public/resource/fc0842c41604dbdfeb5b59ea989535e3/xmlnote/201A459987CD4904B4CADCCDC2CF5393/12143)
+
+# 22、函数的定义和常用操作
+
+![](https://note.youdao.com/yws/public/resource/fc0842c41604dbdfeb5b59ea989535e3/xmlnote/275038E9AD384AE4A0E45CC6CED1BAAB/12150)
+
+
+# 22、函数的定义和常用操作
+
+![图片.png](https://i.loli.net/2019/11/08/mdIcZMLh8ECn5tw.png)
+
+
+
+# 23、可变长参数
+
+python自带的函数 python的内置函数
+
+关键字参数调用:关键字参数不用按照参数顺序传入
+
+
+
+
+
+```python
+# 关键字参数，可以不按照顺序传入参数
+
+def func (a,b,c):
+    print('a = %s' %a)
+    print('b = %s' %b)
+    print('c = %s' %c)
+
+func(1 ,c = 3, b =2)
+
+
+# 可变长参数
+def howlong(first, *other):
+    print(1+len(other))
+
+howlong(123,234,456)
+```
+
+
+
+# 24、函数变量的作用域
+
+内部的变量重新定义之后会把外部的变量覆盖
+
+函数内部定义的变量只作用域函数内部
+
+可以在变量上加   global  让局部变量成为全局变量
+
+
+
+
 # 22、函数的定义和常用操作
 
 ![图片](https://user-images.githubusercontent.com/17619355/68912540-64be4700-0793-11ea-9734-a6a697b7d726.png)
