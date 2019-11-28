@@ -835,3 +835,103 @@ print(p.match('b'))
 
 # 44、正则表达式的分组功能
 
+```python
+import re
+
+p = re.compile('.{3}')
+print(p.match('bat'))
+
+
+# r   标记  表示后面的符号不转译
+p1 = re.compile(r'(\d+)-(\d+)-(\d+)')
+print(p1.match('2018-05-10').group())
+print(p1.match('2018-05-10').groups())
+print(p1.match('2018-05-10').group(1))
+print(p1.match('2018-05-10').group(2))
+print(p1.match('2018-05-10').group(3))
+
+# 控制台输出结果
+<re.Match object; span=(0, 3), match='bat'>
+2018-05-10
+('2018', '05', '10')
+2018
+05
+10
+
+```
+
+
+
+# 45、正则表达式函数库 match和search的区别
+
+不完全匹配，搜索功能
+
+```python
+p1 = re.compile(r'(\d+)-(\d+)-(\d+)')
+
+# 搜索功能，不完全匹配，只要包含了正则表达式匹配的规则，就能匹配成功
+print(p1.search('aa2018-11-10bb'))
+
+# 运行结果
+<re.Match object; span=(2, 12), match='2018-11-10'>
+```
+
+
+
+search一般进行搜索字符串，match是搜索完成之后进行分组
+
+
+
+# 46、正则表达式库替换函数sub的应用
+
+三个参数：匹配规则，替换成的内容，将要替换的字符串
+
+```python
+phone = '123-456-789 # 这是一个电话号码'
+
+p2 = re.sub('#.*$', "", phone)
+print(p2)
+
+# 所有非数字替换成空
+p3 = re.sub(r'\D', '', p2)
+
+print(p3)
+
+# 匹配多次  search只能匹配出第一个
+re.findall('')
+```
+
+
+
+# 47、日期与时间的函数库
+
+time,datetime
+
+time主要是获取过去的时间，datetime是进行时间的操作
+
+```python
+import time
+import datetime
+
+# 1970年到现在的秒数
+print(time.time())
+
+# 现在年月日时间和秒数
+print(time.localtime())
+
+print(time.strftime('%y-%m-%d', time.localtime()))
+
+print(datetime.datetime.now())
+
+newtime = datetime.timedelta(minutes=10)
+print(datetime.datetime.now() + newtime)
+
+one_day = datetime.datetime(2000, 5, 27)
+newdate = datetime.timedelta(days=10)
+print(one_day+newdate)
+```
+
+
+
+# 48、数学相关的库
+
