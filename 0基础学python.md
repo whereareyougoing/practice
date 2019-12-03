@@ -935,3 +935,35 @@ print(one_day+newdate)
 
 # 48、数学相关的库
 
+math:  主要用在机器学习，深度学习   math.sin()  math.cos()
+
+
+
+random:  软件测试，密码学  有限定条件的随机数
+
+
+
+# 49、命令行对文件和文件夹进行操作
+
+ls -l   出现的列里第一个字符是  -  代表是文件，  是  d   代表是文件夹
+
+pwd  显示文件夹路径   ./dir  进入当前目录的下一级dir目录，通常会省略成直接进入一下一级
+
+mkdir -p  多级创建
+
+rm -rf 多级删除
+
+# 50、文件夹操作库
+
+os
+
+pathlib 下的 Path包
+
+
+
+# 51、机器学习的一般流程以及NumPy的安装
+
+![图片](https://user-images.githubusercontent.com/17619355/70041643-7f4c4900-15f8-11ea-905e-2ec48645b868.png)
+
+
+
