@@ -13,3 +13,11 @@ print(arry2)
 print(arry2.dtype)
 
 print(array1 + arry2)
+
+print(arry2 * 10)
+
+print(np.zeros((3,5)))
+print(np.ones((4,6)))
+
+print(np.empty((2,3,4)))
+

@@ -967,9 +967,17 @@ pathlib 下的 Path包
 
 # 52、NumPy的数据与数据类型
 
-![图片](https://user-images.githubusercontent.com/17619355/70041643-7f4c4900-15f8-11ea-905e-2ec48645b868.png)
+![截屏2019-12-04上午12 23 04](https://user-images.githubusercontent.com/17619355/70069237-6a89a880-162c-11ea-8d76-a8279f44dc20.png)
 
 
+
+
+
+# 53、 NumPy的数组和标量
+
+
+
+# 54 、numpy数组的索引和切片
 
 
 
