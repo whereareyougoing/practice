@@ -1005,5 +1005,176 @@ pathlib 下的 Path包
 
 
 
+# 60、机器学习分类原理
+
+tensorflow
+
+机器学习的原理是将一个特定对象模拟化成一个方程组，建立一个模型
+
+
+
+# 61、TensorFlow安装
+
+每次预测之后都会重新建立模型
+
+
+
+
+
+# 62、根据特征值分类的模型和代码
+
+TensorFlow实现简单的深度神经网络分类功能
+
+
+
+# 63、网页数据的采集与urllib库
+
+![image](https://user-images.githubusercontent.com/17619355/70377223-bef29800-194c-11ea-98a5-7eda6164c9b6.png)
+
+urllib、requests是搜集和下载的库
+
+BeautifulSoup库是用于数据格式处理的库
+
+```python
+from urllib import request
+
+url = 'http://www.baidu.com'
+response = request.urlopen(url, timeout=1)
+print(response.read().decode('utf-8'))
+```
+
+
+
+# 64、网页请求的两种方式
+
+get和post
+
+post方式提交必须传入data
+
+~~~python
+from urllib import parse
+from urllib import request
+
+data = bytes(parse.urlencode({'word': 'hello'}), encoding='utf-8')
+
+response = request.urlopen('http://httpbin.org/post', data=data)
+print(response.read().decode('utf-8'))
+
+
+response2 = request.urlopen('http://httpbin.org/get', timeout=1)
+print(response2.read())
+
+
+import urllib
+import socket
+
+try:
+    response3 = request.urlopen('http://httpbin.org/get', timeout=0.1)
+except urllib.error.URLError as e:
+    if isinstance(e.reason, socket.timeout):
+        print('TIME OUT')
+~~~
+
+
+
+请求的时候timeout是为了防止请求不到卡死的状况
+
+
+
+# 65、http头部信息的模拟
+
+
+
+# 66、requests的库的基本使用
+
+第三方库，urllib是python的标准库，但是用起来非常繁琐
+
+```python
+import requests
+
+url = 'http://httpbin.org/get'
+data = {'key': 'value', 'abc': 'xyz'}
+response = requests.get(url, data)
+print(response.text)
+
+response = requests.post(url, data)
+print(response.json())
+```
+
+
+
+# 67、结合正则表达式爬取图片链接
+
+
+
+# 68、BeautifulSoup的安装和使用
+
+~~~python
+from bs4 import BeautifulSoup
+
+html_doc = """
+
+<html><head><title>The Dormouse's story</title></head>
+<body>
+<p class="title"><b>The Dormouse"s story</b></p>
+<p cLass="story">Once upon a time there were three little sisters; and their nanes were
+<a href一"http://example.com/elsie" class="sister" id="link1">ELs ie</a>,
+<a href="http://example.com/lacie" class="sister" id="Link2">Lacie</a> and
+<a href= "http://example.com/tillie" class="sister" id="Link3">Tillie</a>;
+and they lived at the bottom of a well.</p>
+<p class="story">...</p>
+
+"""
+
+soup = BeautifulSoup(html_doc, 'lxml')
+
+print(soup.prettify())
+
+# 找到title标签
+print(soup.title)
+
+# 获取title标签里的内容
+print(soup.title.string)
+
+# 找到p标签
+print(soup.p)
+
+# 找到p标签里的class标签
+print(soup.p['class'])
+
+# 找到a标签
+print(soup.a)
+
+# 找到所有的a标签
+print(soup.find_all('a'))
+
+
+# 找到id为link3的标签
+print(soup.find(id="link3"))
+
+# 找到所有a标签的链接
+for link in soup.find_all('a'):
+    print(link.get('href'))
+
+# 找到文档中所有文本内容
+print(soup.get_text)
+~~~
+
+
+
+# 69、使用爬虫爬取新闻网站
+
+
+
+# 70、使用爬虫爬取图片链接和下载图片
+
+
+
+# 71、如何分析源代码并设计合理的代码结构
+
+
+
+
+
 
 
