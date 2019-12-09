@@ -51,10 +51,9 @@ print(frame2)
 frame2['cap'] = frame2.city == 'beijing'
 print(frame2)
 
-
-pop = { 'beijing':{2008:1.5,2009:2.0},
-        'shanghai':{2008:2.0,2009:3.6}
-        }
+pop = {'beijing': {2008: 1.5, 2009: 2.0},
+       'shanghai': {2008: 2.0, 2009: 3.6}
+       }
 
 frame3 = DataFrame(pop)
 
@@ -63,48 +62,38 @@ print(frame3)
 print(frame3.T)
 
 # 重置索引
-obj4 = Series([4.5,7.2,-5.3,3.5],index=['b','d','c','a'])
-obj5 = obj4.reindex(['a','b','c','d','e'],fill_value=0)
+obj4 = Series([4.5, 7.2, -5.3, 3.5], index=['b', 'd', 'c', 'a'])
+obj5 = obj4.reindex(['a', 'b', 'c', 'd', 'e'], fill_value=0)
 # 空值会影响数据的清洗，将空值重新填充
 print(obj5)
 
-obj6 = Series(['blue','purple','yellow'],index=[0,2,4])
+obj6 = Series(['blue', 'purple', 'yellow'], index=[0, 2, 4])
 # 对缺失的值进行填充
-print(obj6.reindex(range(6),method='bfill'))
+print(obj6.reindex(range(6), method='bfill'))
 
 from numpy import nan as NA
 
 # 直接将缺失的值删除
-data = Series([1,NA,2])
+data = Series([1, NA, 2])
 
 print(data.dropna())
 
-
-data2 = DataFrame([[1.1,6.5,3],[1,NA,NA],[NA,NA,NA]])
+data2 = DataFrame([[1.1, 6.5, 3], [1, NA, NA], [NA, NA, NA]])
 print(data2)
 # 删除整行的值为缺失值
-print(data2.dropna(axis=1,how='all'))
+print(data2.dropna(axis=1, how='all'))
 
 data2.fillna(0)
-print(data2.fillna(0,inplace=True))
+print(data2.fillna(0, inplace=True))
 print(data2)
-
 
 import numpy as np
 
 # 多维索引，可以将数据更好的进行分类
-data3 = Series(np.random.randn(10),index=[['a','a','a','b','b','b','c','c','d','d'],[1,2,3,1,2,3,1,2,2,3]])
+data3 = Series(np.random.randn(10),
+               index=[['a', 'a', 'a', 'b', 'b', 'b', 'c', 'c', 'd', 'd'], [1, 2, 3, 1, 2, 3, 1, 2, 2, 3]])
 
 print(data3['b':'c'])
 
 # 将数组转换成1维，    将数组转换成2维
 print(data3.unstack().stack())
-
-
-
-
-
-
-
-
-
